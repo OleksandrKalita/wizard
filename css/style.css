@@ -1,0 +1,34 @@
+:root {
+    --primary-color: #4C4CF2;
+    --main-text-color: #212A31;
+}
+
+/* Minimizer */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+html,
+body {
+    height: 100%;
+    line-height: 1;
+
+}
+.wrapper {
+    min-height: 100%;
+    /* overflow: hidden; */
+}
+._container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
