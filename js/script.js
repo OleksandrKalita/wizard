@@ -62,12 +62,12 @@ infoBanners.forEach(element => {
 
 const phoneInputField = document.querySelector("#phoneNumber");
 const phoneInput = window.intlTelInput(phoneInputField, {
-    initialCountry: "pl",
+    initialCountry: "by",
     nationalMode: true,
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     separateDialCode: true,
     formatOnDisplay: true,
-    preferredCountries: ["us", "ua", "pl", "de"],
+    preferredCountries: ["by", "ua", "pl", "de"],
 });
 
 
@@ -80,14 +80,14 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     var countryCode = phoneInput.getSelectedCountryData().iso2;
 
     if (!firstName || !email || !phoneNumber || !agree) {
-      alert('Будь ласка, заповніть всі обов\'язкові поля.');
+      alert('Пожалуйста, заполните все поля.');
       event.preventDefault();
       return;
     }
   
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      alert('Будь ласка, введіть коректну адресу електронної пошти.');
+      alert('Введите корректный адрес электронной почты.');
       event.preventDefault();
       return;
     }
@@ -95,17 +95,17 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     var phonePattern = /^\+?\d{1,}$/;
     console.log(phoneInput);
     if (!phonePattern.test(phoneNumber)) {
-      alert('Будь ласка, введіть коректний номер телефону.');
+      alert('Введите корректный номер телефона.');
       event.preventDefault();
       return;
     }
   
     if (lastName && lastName.trim() === "") {
-      alert('Будь ласка, введіть коректне прізвище.');
+      alert('Пожалуйста, введите корректную фамилию.');
       event.preventDefault();
       return;
     }
 
-    alert('Форма відправлена успішно!');
+    alert('Форма отправлена ​​успешно!');
 });
   
